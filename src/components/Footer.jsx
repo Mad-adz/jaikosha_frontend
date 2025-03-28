@@ -249,7 +249,7 @@ const Footer = () => {
             </div>
             <div className="mt-16 border-t border-gray-400/30 pt-8 sm:mt-20 lg:mt-24">
               <div className="text-md text-center text-white">
-                Copyright © 2024 - Jai Kosha. All Rights Reserved.
+                Copyright © 2024 - Jai Kosha Foundation. All Rights Reserved.
                 {/* Crafted with <span className="text-gray-50">♥</span> by AI enthusiasts at
                 <a rel="noopener" href="/">
                   AIOps.
