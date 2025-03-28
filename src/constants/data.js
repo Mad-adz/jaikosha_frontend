@@ -165,7 +165,7 @@ export const activitiesImages = {
       alt: "Temple Image 1",
       caption: "Temple Image 1",
       height: "720",
-      width: "1280",
+      width: "1080",
     },
     {
       id: 18,
@@ -173,7 +173,7 @@ export const activitiesImages = {
       alt: "Temple Image 2",
       caption: "Temple Image 2",
       height: "720",
-      width: "1280",
+      width: "1080",
     },
     {
       id: 19,
@@ -181,7 +181,7 @@ export const activitiesImages = {
       alt: "Temple Image 3",
       caption: "Temple Image 3",
       height: "720",
-      width: "1280",
+      width: "1080",
     },
     {
       id: 20,
@@ -189,7 +189,7 @@ export const activitiesImages = {
       alt: "Temple Image 4",
       caption: "Temple Image 4",
       height: "720",
-      width: "1280",
+      width: "1080",
     },
     {
       id: 21,
@@ -197,7 +197,7 @@ export const activitiesImages = {
       alt: "Temple Image 5",
       caption: "Temple Image 5",
       height: "720",
-      width: "1280",
+      width: "1080",
     },
     {
       id: 22,
@@ -205,7 +205,7 @@ export const activitiesImages = {
       alt: "Temple Image 6",
       caption: "Temple Image 6",
       height: "720",
-      width: "1280",
+      width: "1080",
     },
     {
       id: 23,
@@ -213,7 +213,7 @@ export const activitiesImages = {
       alt: "Temple Image 7",
       caption: "Temple Image 7",
       height: "720",
-      width: "1280",
+      width: "1080",
     },
     {
       id: 24,
@@ -221,7 +221,7 @@ export const activitiesImages = {
       alt: "Temple Image 8",
       caption: "Temple Image 8",
       height: "720",
-      width: "1280",
+      width: "1080",
     },
   ],
 };
