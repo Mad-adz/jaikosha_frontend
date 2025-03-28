@@ -9,7 +9,6 @@ export const EventDetails = lazy(() => import("./EventDetails"));
 export const Events = lazy(() => import("./Events"));
 export const Home = lazy(() => import("./Home"));
 export const Loader = lazy(() => import("./Loader"));
-export const NotFound = lazy(() => import("./NotFound"));
 export const Workshops = lazy(() => import("./Workshops"));
 export const YendhiraKovil = lazy(() => import("./YendhiraKovil"));
 

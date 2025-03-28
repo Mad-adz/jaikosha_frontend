@@ -6,6 +6,7 @@ import {
   createRoutesFromElements,
   RouterProvider,
   Route,
+  Navigate,
 } from "react-router-dom";
 import { RootLayout } from "./layouts";
 import {
@@ -20,7 +21,6 @@ import {
   Home,
   Loader,
   MeditationPractices,
-  NotFound,
   SpritualDevices,
   SuperiorYoga,
   Workshops,
@@ -49,7 +49,8 @@ const router = createBrowserRouter(
         <Route path="spiritual-devices" element={<SpritualDevices />} />
       </Route>
 
-      <Route path="*" element={<NotFound />} />
+      {/* <Route path="*" element={<NotFound />} /> */}
+      <Route path="*" element={<Navigate to="/" replace />} />
     </>
   )
 );
