@@ -17,5 +17,3 @@ export const Modal = lazy(() => import("./Modal"));
 export const BookMyDharshanForm = lazy(() =>
   import("./dharshan/BookMyDharshanForm")
 );
-
-export const ProfileMenu = lazy(() => import("./ProfileMenu"));

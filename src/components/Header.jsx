@@ -4,7 +4,6 @@ import { LuChevronDown, LuMenu } from "react-icons/lu";
 import { NavLink } from "react-router-dom";
 import { jaikosha } from "../assets/images";
 import { navLinks } from "@/constants";
-// import { ProfileMenu } from ".";
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -118,7 +117,6 @@ const Header = () => {
                 </ul>
               </nav>
             </div>
-            {/* <ProfileMenu /> */}
             <div className="flex lg:hidden">
               <button
                 className="inline-flex items-center justify-center p-2 text-zinc-600 rounded-md hover:text-emerald-500 hover:bg-yellow-100/50 focus:outline-none focus:bg-emerald-100 focus:text-emerald-600"
