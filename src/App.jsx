@@ -10,6 +10,7 @@ import {
 import { RootLayout } from "./layouts";
 import {
   Activities,
+  AudioVideoSermons,
   AutoBiography,
   BookMyDharshan,
   Contact,
@@ -18,7 +19,10 @@ import {
   Events,
   Home,
   Loader,
+  MeditationPractices,
   NotFound,
+  SpritualDevices,
+  SuperiorYoga,
   Workshops,
   YendhiraKovil,
 } from "./pages";
@@ -39,6 +43,10 @@ const router = createBrowserRouter(
           <Route index element={<Events />} />
           <Route path=":id" element={<EventDetails />} />
         </Route>
+        <Route path="meditation-practices" element={<MeditationPractices />} />
+        <Route path="superior-yoga" element={<SuperiorYoga />} />
+        <Route path="audio-video-sermons" element={<AudioVideoSermons />} />
+        <Route path="spiritual-devices" element={<SpritualDevices />} />
       </Route>
 
       <Route path="*" element={<NotFound />} />
