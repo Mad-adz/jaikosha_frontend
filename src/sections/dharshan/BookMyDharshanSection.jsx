@@ -30,7 +30,6 @@ const BookMyDharshanSection = () => {
         date.getFullYear() === availableDay.getFullYear()
     );
 
-  
   const handleClose = () => setIsModalOpen(false);
   const handleSubmit = (data) => {
     // console.log("Form Data Submitted:", data);
@@ -57,13 +56,13 @@ const BookMyDharshanSection = () => {
                   <span className="text-emerald-600 text-lg">
                     <MdOutlinePhoneIphone />
                   </span>
-                  <span>9489889848</span>
+                  <span>+919042557589</span>
                 </p>
                 <p className="flex items-center gap-1 mb-4">
                   <span className="text-emerald-600 text-lg">
                     <BiEnvelope />
                   </span>
-                  <span>enquiries@jaikosha.com</span>
+                  <span>jaikoshafoundation24@gmail.com</span>
                 </p>
               </div>
               <div className="w-full">
