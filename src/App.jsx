@@ -29,10 +29,12 @@ import {
 
 import { pdfjs } from "react-pdf";
 
-pdfjs.GlobalWorkerOptions.workerSrc = new URL(
-  "pdfjs-dist/build/pdf.worker.min.mjs",
-  import.meta.url
-).toString();
+pdfjs.GlobalWorkerOptions.workerSrc = `//unpkg.com/pdfjs-dist@${pdfjs.version}/build/pdf.worker.min.mjs`;
+
+// pdfjs.GlobalWorkerOptions.workerSrc = new URL(
+//   "pdfjs-dist/build/pdf.worker.min.mjs",
+//   import.meta.url
+// ).toString();
 
 const router = createBrowserRouter(
   createRoutesFromElements(
@@ -56,13 +58,18 @@ const router = createBrowserRouter(
         <Route path="spiritual-devices" element={<SpritualDevices />} />
       </Route>
 
-      {/* <Route path="*" element={<NotFound />} /> */}
       <Route path="*" element={<Navigate to="/" replace />} />
     </>
   )
 );
 
 const App = () => {
+  // const url = new URL(
+  //   "pdfjs-dist/build/pdf.worker.min.mjs",
+  //   import.meta.url
+  // ).toString();
+  // console.log(url);
+  // console.log(pdfjs.version);
   return (
     <HelmetProvider>
       <Helmet>
