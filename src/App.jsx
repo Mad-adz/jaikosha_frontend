@@ -71,7 +71,7 @@ const App = () => {
   //   import.meta.url
   // ).toString();
   // console.log(url);
-  // console.log(pdfjs.version);
+  console.log(pdfjs.GlobalWorkerOptions.workerSrc);
   return (
     <HelmetProvider>
       <Helmet>

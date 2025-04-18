@@ -4,5 +4,14 @@
       "source": "/(.*)",
       "destination": "/index.html"
     }
+  ],
+  "routes": [
+    {
+      "src": "/events/pdf.worker.mjs",
+      "dest": "/public/pdf.worker.mjs",
+      "headers": {
+        "Content-Type": "application/javascript"
+      }
+    }
   ]
 }
