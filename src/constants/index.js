@@ -1,6 +1,7 @@
 import {
   chandiHomam,
   fullMoonFestival,
+  holisticCentre,
   resourceImg1,
   resourceImg2,
   resourceImg3,
@@ -11,6 +12,7 @@ import {
   testimonialImg3,
   testimonialImg4,
 } from "@/assets/images";
+import { invitationJaiKosha } from "@/assets/pdfs";
 
 // import { resourceImg1 } from "@/assets/images";
 
@@ -98,6 +100,29 @@ export const resources = [
 export const events = [
   {
     id: 1,
+    title: "Holistic Centre",
+    datetime: "10th Jan 2025, 8AM IST",
+    fromDate: "10-01-2025",
+    toDate: "10-01-2025",
+    startTime: "8am IST",
+    endTime: "10am IST",
+    location: "Chennai",
+    fees: "Rs.25000",
+    tags: ["Holistic", "Spiritual"],
+    organizer: "Guruji",
+    url: "holistic-centre",
+    banner: holisticCentre,
+    pdf: invitationJaiKosha,
+    description:
+      "Our vision is to build a learning ecosystem in the holy lands of Thiruvannamalai & Kalikesh, aiming to restore our ancient Indian values such as honesty, family unity, a sense of community, compassion, brotherhood, equality, hard work, and a belief in spirituality.",
+    paragraphs: [
+      "The holistic centres in Thiruvannamalai and Kalikesh will train for free young, aspiring and educated Indians to significantly achieve in wellness, Science, technology, mathematics, innovation, business, agriculture, economics, literature, and a corruption-free nation.",
+      "It will conduct extensive research and make awareness among all our countrymen using modern platforms such as satellite channels and social media. It will ensure to enlighten children a healthy life through several documentaries, books, and feature films, which have become powerful influences in today's world.",
+      "We are expecting the inaugural function of the Holistic Centre at the end of 2025 and expecting all well-wishers to join hands with us and contribute generously to our trust.",
+    ],
+  },
+  {
+    id: 2,
     title: "Chandi Homam",
     datetime: "10th Jan 2025, 8AM IST",
     fromDate: "10-01-2025",
@@ -110,6 +135,7 @@ export const events = [
     organizer: "Guruji",
     url: "chandi-homam",
     banner: chandiHomam,
+    pdf: null,
     description:
       "Chandi Homam is a powerful ritual dedicated to Goddess Chandi, the fierce form of Goddess Durga. It is performed to seek her blessings for protection, prosperity, and victory over evil forces.",
     paragraphs: [
@@ -119,7 +145,7 @@ export const events = [
     ],
   },
   {
-    id: 2,
+    id: 3,
     title: "Full Moon Festival",
     datetime: "14th Jan 2025, 7PM IST",
     fromDate: "14-01-2025",
@@ -132,6 +158,7 @@ export const events = [
     organizer: "Guruji",
     url: "",
     banner: fullMoonFestival,
+    pdf: null,
     description:
       "The Full Moon Festival is a monthly event that celebrates the full moon day. It is a time to reflect, meditate, and connect with the divine energy of the moon.",
     paragraphs: [
@@ -141,7 +168,7 @@ export const events = [
     ],
   },
   {
-    id: 3,
+    id: 4,
     title: "Spritual Classes",
     datetime: "20th Jan 2025, 7AM IST",
     fromDate: "20-01-2025",
@@ -154,6 +181,7 @@ export const events = [
     organizer: "Guruji",
     url: "",
     banner: spiritualClasses,
+    pdf: null,
     description:
       "Join our spiritual classes to learn the ancient teachings and practices of yoga, meditation, and self-realization.",
     paragraphs: [

@@ -51,12 +51,12 @@ const UpcomingEventCard = ({
         <div className="flex justify-between items-center w-full">
           <p className=" text-gray-600">by {organizer}</p>
 
-          {/* <Link to={url} className="flex gap-2">
+          <Link to={`/events/${id}`} className="flex gap-2">
             <span className="text-gray-500">Explore</span>
-          </Link> */}
-          <p className="flex gap-2 cursor-pointer">
+          </Link>
+          {/* <p className="flex gap-2 cursor-pointer">
             <span className="text-gray-500">Explore</span>
-          </p>
+          </p> */}
         </div>
       </div>
     </div>

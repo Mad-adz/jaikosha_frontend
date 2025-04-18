@@ -17,3 +17,6 @@ export const Modal = lazy(() => import("./Modal"));
 export const BookMyDharshanForm = lazy(() =>
   import("./dharshan/BookMyDharshanForm")
 );
+
+export const PdfViewer = lazy(() => import("./PdfViewer"));
+export const PdfModal = lazy(() => import("./PdfModal"));

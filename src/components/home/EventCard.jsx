@@ -1,5 +1,6 @@
 import { truncateText } from "@/utils/helpers";
 import { Link } from "react-router-dom";
+import { LuExternalLink } from "react-icons/lu";
 
 // eslint-disable-next-line react/prop-types
 const EventCard = ({ id, title, datetime, location, description }) => {
@@ -12,7 +13,7 @@ const EventCard = ({ id, title, datetime, location, description }) => {
         <div className="absolute bottom-0 right-0 w-12 h-12 border-b-2 border-r-2 border-pink-500 rounded-br-2xl"></div>
 
         <div className="relative">
-          <div className="absolute -top-12 left-0 px-6 py-2 bg-gradient-to-b from-teal-600 via-emerald-500 to-green-400 rounded-full text-sm text-white">
+          <div className="absolute -top-12 left-0 px-4 py-1 bg-gradient-to-b from-teal-600 via-emerald-500 to-green-400 rounded-full text-sm text-white">
             {/* {datetime} */}
             Spiritual Event
           </div>
@@ -27,49 +28,13 @@ const EventCard = ({ id, title, datetime, location, description }) => {
             {truncateText(description)}
           </p>
 
-          <p
+          <Link
             to={`events/${id}`}
-            className="inline-flex items-center justify-center gap-2 px-6 py-3 rounded-full bg-gradient-to-t from-pink-500 via-red-400 to-yellow-500 hover:opacity-90 transition-opacity text-white"
+            className="inline-flex items-center justify-center gap-2 px-4 py-2 rounded-full bg-gradient-to-t from-pink-500 via-red-400 to-yellow-500 hover:opacity-90 transition-opacity text-white"
           >
             Explore
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="16"
-              height="16"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              strokeWidth="2"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-            >
-              <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
-              <polyline points="15 3 21 3 21 9"></polyline>
-              <line x1="10" y1="14" x2="21" y2="3"></line>
-            </svg>
-          </p>
-
-          {/* <Link
-            to={`events/${id}`}
-            className="inline-flex items-center justify-center gap-2 px-6 py-3 rounded-full bg-gradient-to-t from-pink-500 via-red-400 to-yellow-500 hover:opacity-90 transition-opacity text-white"
-          >
-            Explore
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="16"
-              height="16"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              strokeWidth="2"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-            >
-              <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
-              <polyline points="15 3 21 3 21 9"></polyline>
-              <line x1="10" y1="14" x2="21" y2="3"></line>
-            </svg>
-          </Link> */}
+            <LuExternalLink />
+          </Link>
         </div>
       </div>
     </div>

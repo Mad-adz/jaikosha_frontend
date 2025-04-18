@@ -122,3 +122,8 @@
     box-shadow: 0 0 50px rgb(33, 155, 157, 0.5), 0 0 50px rgb(33, 155, 157, 0.5);
   }
 }
+
+canvas.react-pdf__Page__canvas {
+  width: 100% !important;
+  height: auto !important;
+}

@@ -36,6 +36,7 @@ import spiritualDevicesBanner from "./spiritual_devices_banner.jpg";
 import fullMoonFestival from "./events/fullmoon_festival.jpg";
 import chandiHomam from "./events/chandi_homam.jpg";
 import spiritualClasses from "./events/spiritual_classes.jpg";
+import holisticCentre from "./events/holistic_centre.jpg";
 
 import dharshanBanner from "./dharshan_banner.jpg";
 
@@ -69,6 +70,7 @@ export {
   chandiHomam,
   fullMoonFestival,
   spiritualClasses,
+  holisticCentre,
   dharshanBanner,
   upiQRCode,
   user,
