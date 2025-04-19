@@ -2,11 +2,23 @@ import { events } from "@/constants";
 import { useParams } from "react-router-dom";
 import { MdLocationOn } from "react-icons/md";
 import { BiSolidUser } from "react-icons/bi";
-import { PdfViewer } from "@/components";
+import { Button } from "@/components/ui/button";
+// import { PdfViewer } from "@/components";
 
 const EventDetails = () => {
   const { id } = useParams();
   const currentEvent = events.find((event) => event.id === Number(id));
+
+  const handleOpenAndDownload = () => {
+    const link = document.createElement("a");
+    link.href = currentEvent?.pdf;
+    link.target = "_blank";
+    link.rel = "noopener noreferrer";
+    // link.download = `${currentEvent?.title}.pdf`;
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+  };
 
   return (
     <main className="mt-[6rem]">
@@ -36,14 +48,28 @@ const EventDetails = () => {
                     <p className="text-zinc-800 mb-4 indent-10">
                       {currentEvent?.description}
                     </p>
-                    <p className="flex items-center gap-2 mb-2">
-                      <MdLocationOn className="text-emerald-600" />
-                      <span>{currentEvent?.location}</span>
-                    </p>
-                    <p className="flex items-center gap-2">
-                      <BiSolidUser className="text-emerald-600" />
-                      <span>{currentEvent?.organizer}</span>
-                    </p>
+                    <div className="flex justify-between items-center">
+                      <div>
+                        <p className="flex items-center gap-2 mb-2">
+                          <MdLocationOn className="text-emerald-600" />
+                          <span>{currentEvent?.location}</span>
+                        </p>
+                        <p className="flex items-center gap-2">
+                          <BiSolidUser className="text-emerald-600" />
+                          <span>{currentEvent?.organizer}</span>
+                        </p>
+                      </div>
+                      {currentEvent?.pdf && (
+                        <div>
+                          <Button
+                            variant="outline"
+                            onClick={handleOpenAndDownload}
+                          >
+                            View Invitation
+                          </Button>
+                        </div>
+                      )}
+                    </div>
                   </div>
                 </div>
                 {currentEvent?.paragraphs.length > 0 && (
@@ -71,7 +97,7 @@ const EventDetails = () => {
           </div>
         </div>
       </section>
-      {currentEvent?.pdf && (
+      {/* {currentEvent?.pdf && (
         <section className="pb-4">
           <div className="container">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
@@ -79,7 +105,7 @@ const EventDetails = () => {
             </div>
           </div>
         </section>
-      )}
+      )} */}
     </main>
   );
 };
