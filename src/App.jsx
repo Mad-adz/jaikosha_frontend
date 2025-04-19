@@ -72,7 +72,6 @@ const App = () => {
   // ).toString();
   // console.log(url);
   // console.log(pdfjs.GlobalWorkerOptions.workerSrc);
-  console.log(pdfjs.GlobalWorkerOptions.workerSrc);
   return (
     <HelmetProvider>
       <Helmet>
