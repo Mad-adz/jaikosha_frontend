@@ -2,9 +2,10 @@ import { BookMyDharshanForm, Modal } from "@/components";
 import { useState } from "react";
 import { DayPicker, getDefaultClassNames } from "react-day-picker";
 import "react-day-picker/style.css";
-import { MdOutlinePhoneIphone } from "react-icons/md";
-import { BiEnvelope } from "react-icons/bi";
-import { timeSlots } from "@/constants";
+import { enquiries, timeSlots } from "@/constants";
+// import { MdOutlinePhoneIphone, MdLocalPhone } from "react-icons/md";
+// import { BiEnvelope } from "react-icons/bi";
+
 const BookMyDharshanSection = () => {
   const defaultClassNames = getDefaultClassNames();
   const [selectedDate, setSelectedDate] = useState(null);
@@ -52,18 +53,62 @@ const BookMyDharshanSection = () => {
                 <p className="my-4">
                   For inquiries or assistance with booking, please contact us:
                 </p>
-                <p className="flex items-center gap-1 mb-4 ">
+                {/* <div>
+                  {enquiries &&
+                    enquiries.map((enquiry) => (
+                      <p key={enquiry.id} className="flex items-center gap-1 mb-4 ">
+                        <span className="text-emerald-600 text-lg">
+                          <Icon />
+                        </span>
+                        <span>+919042557589</span>
+                      </p>
+                    ))}
+                </div> */}
+                <div className="space-y-3">
+                  {enquiries.map((item) => {
+                    const contact = Object.values(item).find(
+                      (val) => typeof val === "object"
+                    );
+                    const { label, value, Icon } = contact;
+                    const href =
+                      label.toLowerCase() === "email"
+                        ? `mailto:${value}`
+                        : `tel:${value.replace(/\s+/g, "")}`;
+
+                    return (
+                      <div
+                        key={item.id}
+                        className="flex items-center space-x-2"
+                      >
+                        <Icon className="text-emerald-600 text-lg" />
+                        <a
+                          href={href}
+                          className="hover:text-blue-500 hover:underline transition-colors"
+                        >
+                          {value}
+                        </a>
+                      </div>
+                    );
+                  })}
+                </div>
+                {/* <p className="flex items-center gap-1 mb-4 ">
                   <span className="text-emerald-600 text-lg">
                     <MdOutlinePhoneIphone />
                   </span>
                   <span>+919042557589</span>
+                </p>
+                <p className="flex items-center gap-1 mb-4 ">
+                  <span className="text-emerald-600 text-lg">
+                    <MdLocalPhone />
+                  </span>
+                  <span>+91 44-31528443</span>
                 </p>
                 <p className="flex items-center gap-1 mb-4">
                   <span className="text-emerald-600 text-lg">
                     <BiEnvelope />
                   </span>
                   <span>jaikoshafoundation24@gmail.com</span>
-                </p>
+                </p> */}
               </div>
               <div className="w-full">
                 <div className="relative mb-6">

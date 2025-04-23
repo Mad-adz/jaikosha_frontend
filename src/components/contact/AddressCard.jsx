@@ -8,6 +8,7 @@ const AddressCard = ({
   isAddress,
   email,
   mobile,
+  landline,
   description,
 }) => {
   return (
@@ -36,12 +37,12 @@ const AddressCard = ({
               {email && (
                 <>
                   <div>
-                    <span className="font-medium">{email.label} : </span>
+                    <span className="font-medium">{email?.label} : </span>
                     <a
-                      href={`mailto:${email.value}`}
+                      href={`mailto:${email?.value}`}
                       className="group-hover:text-white hover:underline"
                     >
-                      {email.value}
+                      {email?.value}
                     </a>
                   </div>
                 </>
@@ -49,12 +50,25 @@ const AddressCard = ({
               {mobile && (
                 <>
                   <div>
-                    <span className="font-medium">{mobile.label} : </span>
+                    <span className="font-medium">{mobile?.label} : </span>
                     <a
-                      href={`tel:${mobile.value}`}
+                      href={`tel:${mobile?.value}`}
                       className="group-hover:text-white hover:underline"
                     >
-                      {mobile.value}
+                      {mobile?.value}
+                    </a>
+                  </div>
+                </>
+              )}
+              {landline && (
+                <>
+                  <div>
+                    <span className="font-medium">{landline?.label} : </span>
+                    <a
+                      href={`tel:${landline?.value}`}
+                      className="group-hover:text-white hover:underline"
+                    >
+                      {landline?.value}
                     </a>
                   </div>
                 </>
@@ -63,8 +77,8 @@ const AddressCard = ({
             <div className="duration-300 group-hover:text-white mt-5">
               {description?.map((desc, index) => (
                 <p key={index} className="mb-2">
-                  <span className="font-medium">{desc.label} : </span>{" "}
-                  {desc.value}
+                  <span className="font-medium">{desc?.label} : </span>{" "}
+                  {desc?.value}
                 </p>
               ))}
             </div>

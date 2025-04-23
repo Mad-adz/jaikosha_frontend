@@ -1,3 +1,6 @@
+import { MdOutlinePhoneIphone, MdLocalPhone } from "react-icons/md";
+import { BiEnvelope } from "react-icons/bi";
+
 import {
   chandiHomam,
   fullMoonFestival,
@@ -253,6 +256,7 @@ export const addresses = [
     title: "24/7 Quick Contact",
     email: { label: "Email", value: "jaikoshafoundation24@gmail.com" },
     mobile: { label: "Mobile", value: "+919042557589" },
+    landline: { label: "Landline", value: "+91 44-31528443" },
     description: [
       { label: "Working Hours", value: "Mon-Sat" },
       { label: "Morning", value: "10.00 AM - 1.00 PM" },
@@ -262,27 +266,34 @@ export const addresses = [
   },
 ];
 
+export const enquiries = [
+  {
+    id: 1,
+    mobile: {
+      label: "Mobile",
+      value: "+919042557589",
+      Icon: MdOutlinePhoneIphone,
+    },
+  },
+  {
+    id: 2,
+    landline: {
+      label: "Landline",
+      value: "+91 44-31528443",
+      Icon: MdLocalPhone,
+    },
+  },
+  {
+    id: 3,
+    email: {
+      label: "Email",
+      value: "jaikoshafoundation24@gmail.com",
+      Icon: BiEnvelope,
+    },
+  },
+];
+
 export const timeSlots = [
-  // "00:00",
-  // "00:30",
-  // "01:00",
-  // "01:30",
-  // "02:00",
-  // "02:30",
-  // "03:00",
-  // "03:30",
-  // "04:00",
-  // "04:30",
-  // "05:00",
-  // "05:30",
-  // "06:00",
-  // "06:30",
-  // "07:00",
-  // "07:30",
-  // "08:00",
-  // "08:30",
-  // "09:00",
-  // "09:30",
   "10:00",
   "10:30",
   "11:00",
@@ -302,15 +313,6 @@ export const timeSlots = [
   "18:00",
   "18:30",
   "19:00",
-  // "19:30",
-  // "20:00",
-  // "20:30",
-  // "21:00",
-  // "21:30",
-  // "22:00",
-  // "22:30",
-  // "23:00",
-  // "23:30",
 ];
 
 export const defaultAvailability = {
